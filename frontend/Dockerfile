@@ -1,3 +1,4 @@
+#Maintainer <Irving Sanchez> 
 # Lo iniciamos con la imagen official de Node 8
 FROM node:13
 # Vamos a crear un directorio donde dejar la aplicación Angular
@@ -5,7 +6,7 @@ RUN mkdir -p /usr/front
 # Nos cambiamos a ese directorio 
 WORKDIR /usr/front
 # Copiamos el paquete json para gestionar las dependencias
-COPY package.json /usr/front
+COPY frontend/package.json /usr/front
 # Instalamos esas depndencias
 RUN npm install
 #instalamos angular

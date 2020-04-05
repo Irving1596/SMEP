@@ -1,0 +1,113 @@
+{
+    "id": 1100,
+    "name": "Tema 1: Conjunto de los números irracionales ",
+    "description": "JavaScript Quiz (Basic Multiple Choice Questions for JavaScript Developers)",
+    "cant": 3,
+    "questions": [{
+            "id": 1010,
+            "name": "¿Cuál de las siguientes opciones es un número irracional?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "π",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "1,2,3,4,5,6",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "-4/4, -3/4, -2/4, -1/4",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "1 + i, 0 – i ",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1011,
+            "name": "¿El número Pi (π) y Euler (e) son números?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Enteros",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Decimal",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Naturales",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Trascendentales ",
+                    "isAnswer": true
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1012,
+            "name": "¿El símbolo de los números Irracionales se denota por la Letra?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "R",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "N",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "I",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Q",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+
+    ]
+}

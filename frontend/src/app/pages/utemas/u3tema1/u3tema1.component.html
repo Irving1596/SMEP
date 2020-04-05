@@ -1,0 +1,77 @@
+<app-header2></app-header2>
+
+<body background="../assets/images/background/p6.jpg">
+    <br>
+    <!--Comienzo del Tema-->
+    <!-- Carta Principal Horizontal-->
+    <div class="row d-flex justify-content-center ">
+        <!-- News jumbotron -->
+        <div class="jumbotron text-center blue-grey lighten-5" style="max-width: 60rem;">
+
+            <!-- Subtitle -->
+            <h2 class="orange darken-4-text text-white font-weight-bold"><i class="fas fa-square-root-alt pr-1"></i>Tema 1</h2>
+
+            <!-- Title del tema-->
+            <h3 class="card-title h3">Monomios semejantes y su reducción</h3>
+
+
+            <!-- Grid row -->
+            <div class="row d-flex justify-content-center">
+
+                <!-- Grid column -->
+                <div class="col-xl-10 pb-2">
+                    <p class="card-text text-justify">La reducción de términos semejantes es un método que se emplea para simplificar expresiones algebraicas. En una expresión algebraica, los términos semejantes, son aquellos que tienen la misma variable; es decir, tienen las mismas incógnitas
+                        representadas por una letra, y estas tienen los mismos exponentes.</p><br>
+                    <p class="card-text text-justify">En algunos casos los polinomios son extensos, y para llegar a una solución se debe tratar de reducir la expresión; eso es posible cuando existen términos que son semejantes, que pueden ser combinados aplicando operaciones y propiedades
+                        algebraicas como suma, resta, multiplicación y división.</p>
+                    <br>
+                    <h4 class="card-text text-justify"><u>Explicación</u></h4>
+                    <br>
+                    <p class="card-text text-justify">Los términos semejantes están formados por las mismas variables con los mismos exponentes, y en algunos casos estos solo se diferencian por sus coeficientes numéricos.</p>
+                    <br>
+                    <p class="card-text text-justify">También son considerados términos semejantes aquellos que no tienen variables; es decir, aquellos términos que solo poseen constantes. Así, por ejemplo, los siguientes son términos semejantes:</p>
+                    <br>
+                    <ul>
+                        <li class="card-text text-justify">-6x<sup>2</sup> – 3x<sup>2</sup>. Ambos términos tienen la misma variable x<sup>2</sup>.</li>
+                        <li class="card-text text-justify">-4a<sup>2</sup>b<sup>3</sup> + 2a<sup>2</sup>b<sup>3</sup>. Ambos términos tienen las mismas variables a<sup>2</sup>b<sup>3</sup>.</li>
+                        <li class="card-text text-justify">-7 – 6. Los términos son constantes.</li>
+                    </ul>
+                    <br>
+                    <p class="card-text text-justify">Aquellos términos que tienen las mismas variables pero con diferentes exponentes son llamados términos no semejantes, como por ejemplo:</p>
+                    <br>
+                    <ul>
+                        <li class="card-text text-justify">–9a<sup>2</sup>b + 5ab. Las variables tienen diferentes exponentes</li>
+                        <li class="card-text text-justify">–5x + y. Las variables son diferentes.</li>
+                        <li class="card-text text-justify">–b – 8. Un término tiene una variable, el otro es una constante.</li>
+                    </ul>
+                    <br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+                    <!--Ejemplos 1-->
+                    <p class="card-text text-justify">Reducir los términos de la siguiente expresión: <b>10x + 3y + 4x + 5y</b></p>
+                    <br>
+                    <p class="card-text text-justify"><b>Solución</b></p>
+                    <p class="card-text text-justify">Primero se ordenan los términos para agrupar los que son semejantes, aplicando la propiedad conmutativa:</p>
+                    <p class="card-text text-justify"><b>10x + 3y + 4x + 5y = 10x + 4x + 3y +5y.</b></p>
+                    <p class="card-text text-justify">Luego se aplica la propiedad distributiva y se suman los coeficientes que acompañan a las variables para obtener la reducción de los términos:</p>
+                    <p class="card-text text-justify"><b>10x + 4x + 3y +5y</b></p>
+                    <p class="card-text text-justify"><b>= (10 + 4)x + (3 + 5)y</b></p>
+                    <p class="card-text text-justify"><b>= 14x + 8y</b></p>
+                    <!--Fin de Ejemplos 1-->
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+
+            <!--Botones-->
+            <div class="pagination pg-blue justify-content-center">
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3']">Regresar</a></button>
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3tem1eje1']">Realizar Ejercicio</a></button>
+            </div>
+
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- News jumbotron -->
+
+    <!--Final del Tema-->
+</body>

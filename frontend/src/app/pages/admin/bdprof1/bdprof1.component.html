@@ -1,0 +1,239 @@
+<br>
+
+
+
+
+
+
+<div class="text-left container mt-2">
+
+
+    <!-- Parte del listado de Catedra -->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h2 class="card-title">Listado de Profesores Existentes</h2>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm">
+
+                <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                                <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 class="modal-title w-100" id="myModalLabel">Editar Profesor</h4>
+                            </div>
+                            <div class="modal-body">
+
+
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <input type="search" class="form-control" placeholder="Nombre:" [(ngModel)]="nombre" required>
+                                        </div>
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <input type="search" class="form-control" placeholder="Cedula:" [(ngModel)]="cedula" required>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+
+                                        <div class="md-form input-group">
+                                            <input type="search" class="form-control" placeholder="Apellido:" [(ngModel)]="apellido" required>
+                                            <span class="input-group-btn"></span>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+
+
+
+
+                                    <div class="col-md-4">
+
+
+                                        <p>Sexo:</p>
+                                        <!-- Default inline 1-->
+                                        <form>
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios" [(ngModel)]="sexo" [value]="M">
+                                                <label class="form-check-label" for="materialUnchecked">M</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input" id="materialChecked" name="materialExampleRadios" [(ngModel)]="sexo" [value]="F">
+                                                <label class="form-check-label" for="materialChecked">F</label>
+                                            </div>
+                                        </form>
+
+
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+
+                                        <div class="md-form input-group">
+                                            <input type="search" class="form-control" placeholder="Dirección" [(ngModel)]="direccion" required>
+                                            <span class="input-group-btn"></span>
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <input type="email" class="form-control" placeholder="Correo" [(ngModel)]="correo">
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+
+                                        <div class="md-form input-group">
+                                            <input type="search" class="form-control" placeholder="Celular" [(ngModel)]="celular" required>
+                                            <span class="input-group-btn"></span>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+
+                                <h4 class="modal-title w-100" id="myModalLabel">Credenciales</h4>
+                                <hr>
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <p>Usuario:</p>
+                                            <input readonly type="search" class="form-control" placeholder={{cedula}} [(ngModel)]="user">
+                                        </div>
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <p>Contraseña:</p>
+                                            <input type="search" class="form-control" placeholder="" [(ngModel)]="password">
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Cancelar</button>
+                                <button type="button" mdbBtn color="primary" class="relative waves-light" (click)="f_update_profesor();basicModal.hide();" mdbWavesEffect>Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="http://localhost:4200/#/registroprof " class="btn btn-rounded btn-md ">Crear Profesor</a> -->
+
+            </div>
+            <div class="col-sm-8">
+
+            </div>
+        </div>
+
+        <div class="table-responsive">
+      <table class="table table-striped w-auto">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Contraseña</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col-sm"> Dirección </th>
+                    <th scope="col-sm"> Correo </th>
+                    <th scope="col-sm"> Celular </th>
+                    <th scope="col-sm"> Editar </th>
+                    <th scope="col-sm"> Borrar </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr  *ngFor="let profesor of profesores; let i = index">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{profesor.ced_profesor}}</td>
+                    <td>{{profesor.password}}</td>
+                    <td>{{profesor.nombre}}</td>
+                    <td>{{profesor.apellido}}</td>
+                    <td>{{profesor.sexo}}</td>
+                    <td>{{profesor.direccion}}</td>
+                    <td>{{profesor.correo}}</td>
+                    <td>{{profesor.celular}}</td>
+                    <td>
+                        <button type="button" name="button" class="btn btn-warning bbtn" (click)="f_editar_profesor(profesor);basicModal.show()">
+            <img src="./assets/img/png/edit-icon.png" alt="Editar" width="14px" height="14px">
+          </button>
+                    </td>
+                    <td>
+                        <button type="button" name="button" class="btn btn-outline-danger bbtn" (click)="f_borrar_profesor(profesor)">
+            <img src="./assets/img/png/delete-icon.png" alt="Editar" width="14px" height="14px">
+          </button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</div>
+    </div>
+
+    <!-- Boton Inserta datos -->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded nav justify-content-center">
+        <button type="button" class="btn btn-success bbtn btn-lg" [routerLink]="['/regisprof1']">Regresar</button>
+    </div>
+
+</div>

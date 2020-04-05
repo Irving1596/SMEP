@@ -1,0 +1,132 @@
+<app-header2></app-header2>
+
+<body background="../assets/images/background/p6.jpg">
+    <br>
+    <!--Comienzo del Tema-->
+    <!-- Carta Principal Horizontal-->
+    <div class="row d-flex justify-content-center ">
+        <!-- News jumbotron -->
+        <div class="jumbotron text-center blue-grey lighten-5" style="max-width: 60rem;">
+
+            <!-- Subtitle -->
+            <h2 class="orange-text my-4 font-weight-bold"><i class="fas fa-drafting-compass pr-1"></i>Tema 3</h2>
+
+            <!-- Title del tema-->
+            <h3 class="card-title h3">Multiplicación de números reales</h3>
+
+
+            <!-- Grid row -->
+            <div class="row d-flex justify-content-center">
+
+                <!-- Grid column -->
+                <div class="col-xl-10 pb-2">
+                    <p class="card-text text-justify">En una multiplicación de números reales, los factores pueden ser todos números racionales o todos números racionales o todos irracionales o unos racionales y otros irracionales.</p>
+                    <br>
+                    <p class="card-text text-justify"> * Si todos los factores son racionales, se aplica los pasos para multiplicar números decimales o números fraccionarios, según corresponda.</p>
+                    <br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+
+                    <!--Ejemplos 1-->
+                    <img src="../assets/images/background/Ejercicios de multiplicación.PNG" alt="producto"><br><br>
+                    <!--Fin de Ejemplos 1-->
+
+                    <br>
+                    <p class="card-text text-justify">Cuando en una multiplicación aparezca un factor irracional, se puede multiplicar los términos racionales y se deja indicada la multiplicación del irracional. Dos casos son los siguientes:</p>
+                    <br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+                    <!--Ejemplos 2-->
+                    <img src="../assets/images/background/ejemplo2.multiplicacion.PNG" alt="producto"><br><br>
+                    <!--Fin de Ejemplos 2-->
+                    <p class="card-text text-justify">Si hay varios términos irracionales radicales se debe tomar en cuenta la siguiente propiedad:</p>
+                    <br>
+                    <img src="../assets/images/background/40_4.png" alt="producto"><br><br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+                    <img src="../assets/images/background/Multiplicacion3.PNG" alt="producto"><br><br>
+                    <p class="card-text text-justify">También se puede realizar las multiplicaciones con una aproximación de los términos irracionales.</p><br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+                    <br>
+                    <p class="text-center"><b>√2∙2 ≈ 1,4142 (2) ≈ 2,8284</b></p>
+                    <br>
+                    <p class="card-text text-justify">En R, la multiplicación tiene las siguientes propiedades:</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">Propiedades de la Multiplicación</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog Modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Propriedades de la multiplicación de números reales. ∀ a,b,c ϵ R</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Inicio Tabla de Propiedades-->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Clausura</td>
+                                    <td>a ∙ b ∈ R</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Conmutativa</td>
+                                    <td>a ∙ b = b ∙ a</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Asociativa</td>
+                                    <td>( a ∙ b) ∙ c = a ∙ (b ∙ c)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Elemento neutro</td>
+                                    <td>a ∙ 1 = a</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Elemento absorbente</td>
+                                    <td>a ∙ 0 = 0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Elemento inverso</td>
+                                    <td>a ∙ 1 / a = 1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>Distributiva</td>
+                                    <td>a ∙ ( b ± c) = a ∙ b ± a ∙ c</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--Fin de Tabla de Propiedades-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <!--Botones-->
+            <div class="pagination pg-blue justify-content-center">
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u1']">Regresar</a></button>
+
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a
+                        [routerLink]="['/u1tem3eje1']">Realizar Ejercicio</a></button>
+            </div>
+
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- News jumbotron -->
+</body>
+<!--Final del Tema-->

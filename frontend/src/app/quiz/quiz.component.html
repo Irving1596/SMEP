@@ -1,0 +1,133 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="text-left  container mt-2">
+    <div class="shadow  bg-light mb-3 p-5 mb-5 bg-white rounded" width="20px">
+        <div class="row">
+            <div class="col-6">
+                <!-- <h3>Quiz Application</h3> -->
+            </div>
+
+        </div>
+        <div id="quiz">
+            <h2 class="text-center font-weight-normal">{{quiz.name}}</h2>
+            <br>
+
+            <div *ngIf="mode=='quiz' && quiz">
+                <div *ngFor="let question of filteredQuestions;">
+                    <div class="badge badge-info">Preguntas {{pager.index + 1}} de {{pager.count}}.</div>
+                    <br>
+                    <div *ngIf="config.duration" class="badge badge-info float-right">Tiempo: {{ellapsedTime}} / {{duration}}</div>
+                    <h3 class="font-weight-normal">{{pager.index + 1}}.
+                        <br>
+                        <span [innerHTML]="question.name"></span>
+                    </h3>
+                    <div class="row text-left options">
+                        <div class="col-6" *ngFor="let option of question.options">
+                            <div style="background-color:lightblue" class="option">
+                                <div>
+                                    <hr>
+                                </div>
+                                <label class="font-weight-normal" [attr.for]="option.id">
+              <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" /> {{option.name}}
+            </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+                <br>
+                <div class="text-center">
+
+                    <button class="btn btn-primary" (click)="goTo(pager.index + 1);">Siguiente</button>
+
+                    <!--<pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>-->
+                </div>
+            </div>
+
+            <div class="row text-center" *ngIf="mode=='review'">
+                <div class="col-4 cursor-pointer" *ngFor="let question of quiz.questions; let index = index;">
+                    <div (click)="goTo(index)" class="p-3 mb-2 {{ isAnswered(question) == 'Answered'? 'bg-info': 'bg-warning' }}">{{index + 1}}. {{ isAnswered(question) }}</div>
+                </div>
+            </div>
+
+
+            <div class="result" *ngIf="mode=='result'">
+                <!-- <h2>Resultados del su ejercicio</h2> -->
+
+                <div class="result" *ngIf="mode=='result'">
+
+
+                    <body>
+                        <div class="main-section">
+                            <div class="dashbord">
+                                <div class="icon-section">
+                                    <i class="fas fa-clock" aria-hidden="true"></i><br>
+                                    <small>Tiempo invertido.</small>
+                                    <p>{{diffs}}</p>
+                                </div>
+                                <!--<div class="detail-section">
+                                    <a href="#">More Info </a>
+                                </div>-->
+                            </div>
+                            <div class="dashbord dashbord-green">
+                                <div class="icon-section">
+                                    <i class="fas fa-lightbulb" aria-hidden="true"></i><br>
+                                    <small>Puntuación Máx.</small>
+                                    <p>{{puntuacion_max}}pts</p>
+                                </div>
+                                <!--<div class="detail-section">
+                                    <a href="#">More Info </a>
+                                </div>-->
+                            </div>
+                            <div class="dashbord dashbord-orange">
+                                <div class="icon-section">
+                                    <i class="fas fa-medal" aria-hidden="true"></i><br>
+                                    <small>Preguntas correctas.</small>
+                                    <p>{{sum}}/{{quiz.cant}}</p>
+                                </div>
+                                <!--<div class="detail-section">
+                                    <a href="#">More Info </a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </body>
+      <h2>Resultados de su ejercicio</h2>
+                    <br>
+                    <div *ngFor="let question of quiz.questions; let index = index">
+                        <div class="result-question">
+                            <h5>{{index + 1}}. {{question.name}}</h5>
+                            <div class="row">
+                                <div class="col-6" *ngFor="let Option of question.options">
+                                    <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> {{Option.name}}
+                                </div>
+                            </div>
+                            <div class="p-1 m-2 alert {{ isCorrect(question) == 'Correcta'? 'alert-success': 'alert-danger'}}">Su respuesta es: {{resp}}.</div>
+                        </div>
+                    </div>
+                    <br>
+                    <h2 class="text-center font-weight-normal">
+                        <div class="p-1 m-2 alert {{ calif >=3 ? 'alert-success': 'alert-danger'}}">Su calificación es: {{calif | number:'1.1-1'}}</div>
+                    </h2>
+                </div>
+
+
+
+                <br>
+
+                <br>
+
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u1']">Regresar</a></button>
+
+
+
+            </div>
+
+        </div>
+
+    </div>

@@ -1,0 +1,126 @@
+.navbar {
+    z-index: 1040;
+}
+
+.side-nav {
+    margin-top: 57px !important;
+}
+
+@media (min-width: 1200px) {
+    .fixed-sn main {
+        margin-left: 20% !important;
+        margin-right: 20% !important;
+    }
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 18;
+    font-family: "lato", sans-serif;
+    font-weight: 800;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.pimg1{
+    position: relative;
+    /*opacity: 0.90;*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+
+    fixed = parallax
+    scroll = normal
+
+    */
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url('/assets/images/background/fondo(3).png'); 
+    min-height: 250px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-lingt {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+}
+
+.ptext .border {
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext,
+.border,
+.trans {
+    background-color: transparent;
+}
+
+@media(max-width:568px) {
+    .pimg1 {
+        background-attachment: scroll;
+    }
+}
+
+.col-md-3 {
+    padding: 10px;
+    margin: 10px;
+    min-height: 300px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.btn-danger{
+    background-color: #c72d20a1 !important;
+    color: #fff;
+}
+
+.card {
+    width: 335px;
+    height: 280px;
+    background: #fff;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.fa-address-card{
+    margin-right: 10px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    background: #fff;
+  }

@@ -1,0 +1,70 @@
+<app-header2></app-header2>
+
+<body background="../assets/images/background/p6.jpg">
+    <br>
+    <!--Comienzo del Tema-->
+    <!-- Carta Principal Horizontal-->
+    <div class="row d-flex justify-content-center ">
+        <!-- News jumbotron -->
+        <div class="jumbotron text-center blue-grey lighten-5" style="max-width: 60rem;">
+
+            <!-- Subtitle -->
+            <h2 class="bg-danger text-white font-weight-bold"><i class="fas fa-minus-circle pr-1"></i>Tema 3</h2>
+
+            <!-- Title del tema-->
+            <h3 class="card-title h3">Resta de polinomios</h3>
+
+
+            <!-- Grid row -->
+            <div class="row d-flex justify-content-center">
+
+                <!-- Grid column -->
+                <div class="col-xl-10 pb-2">
+                    <p class="card-text text-justify">La resta de polinomios se considera la operación por medio de la cual uno de los polinomios es identificado como el minuendo, y otro el, como el sustraendo, procediendo entonces a sumar el opuesto del sustraendo (el cual es definido
+                        como opuesto por la alteración de signos que sufre al ser agrupado dentro de un paréntesis delante del cual se coloca un signo de resta) al minuendo.</p>
+                    <br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+                    <br>
+                    <p class="card-text text-justify">Al igual que suele ocurrir en la operación de Suma de polinomios, en cuanto a la operación de resta pueden existir dos métodos aplicables, los cuales conducirán a iguales resultados. A continuación, una breve explicación de cada uno
+                        de ellos:</p>
+                    <br>
+                    <p class="card-text text-justify"><b>Método 1</b></p>
+                    <p class="card-text text-justify">El primer método consistirá en <b>ordenar los polinomios, agruparlos según sus grados, y proceder a sumar los términos semejantes</b>, a fin de llegar una expresión común. Un ejemplo de esto, lo puede constituir el siguiente:</p>
+                    <br>
+                    <p class="card-text text-justify">Dado los siguientes polinomios, se procederá a realizar una resta entre estas expresiones algebraicas:</p>
+                    <br>
+                    <p class="card-text text-center">P<sub>(x)</sub>= 4 – 2x – 5x<sup>2</sup> + 2 + 8x<sup>3<br> </sup></p>
+                    <p class="card-text text-center">Q<sub>(x)</sub>= 9x<sup>2</sup> – x<sup>3</sup> + 9 – 2</p>
+                    <br>
+                    <p class="card-text text-justify">Lo primero que deberá hacerse es organizar ambos polinomios, lo cual se hará en base al grado máximo:</p>
+                    <br>
+                    <p class="card-text text-center">P<sub>(x)</sub>= 8x<sup>3 </sup>– 5x<sup>2</sup> – 2x + 4 + 2</p>
+                    <p class="card-text text-center">Q<sub>(x)</sub>= –x<sup>3</sup> + 9x<sup>2 </sup>+ 9 – 2</p>
+                    <br>
+                    <!--Ejemplos 1-->
+                    <p class="card-text text-justify">Una vez hecho esto, <b>se deberá colocar cada polinomio uno frente al otro</b>, a fin de poder observar cuáles son los términos semejantes:</p>
+                    <br>
+                    <p class="card-text text-center">P<sub>(x)</sub>–Q<sub>(x)</sub>= (8x<sup>3</sup>+3x<sup>2</sup>–5x<sup>2</sup>–2x +4+2) – (–x<sup>3</sup>+9x<sup>2</sup>+x<sup>2</sup>+9–2)=</p>
+                    <p class="card-text text-center">P<sub>(x)</sub>–Q<sub>(x)</sub>= 8x<sup>3</sup>–5x<sup>2</sup>–2x +4+2 + x<sup>3</sup>-9x<sup>2</sup>-9+2</p>
+                    <br>
+                    <!--Le falta-->
+                    <!--Fin de Ejemplos 1-->
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+
+            <!--Botones-->
+            <div class="pagination pg-blue justify-content-center">
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3']">Regresar</a></button>
+
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3tem3eje1']">Realizar Ejercicio</a></button>
+            </div>
+
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- News jumbotron -->
+
+    <!--Final del Tema-->
+</body>

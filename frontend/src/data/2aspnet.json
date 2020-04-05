@@ -1,0 +1,182 @@
+{
+    "id": 1101,
+    "name": "Tema 2: Adición de números reales",
+    "description": "Asp.Net Quiz (contains webform, mvc, web API, etc.)",
+    "cant": 5,
+    "questions": [{
+            "id": 1010,
+            "name": "¿Cuál son los términos que intervienen en la adición de números reales?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Restador y Sumador",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Coeficiente y el residuo ",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Sumando y el resultado",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Resultado y el coeficiente",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1011,
+            "name": "¿Cuál es el resultado de 4 + (-5)?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "-1",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "-9",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "1",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "9",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1012,
+            "name": "¿Cuáles son los términos que intervienen en la sustracción de números reales?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Cofactor y el resultado",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Sustraendo, minuendo y el resultado",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Restador y el sumador",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Dividendo, residuo, resultado",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1013,
+            "name": "¿Cuál es el resultado de 35 + (-40)?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "-4",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "-6",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "-5",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "-3",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1014,
+            "name": "¿Cuál es el resultado de -27 + (-7)?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "20",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "-15",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "17",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "-34",
+                    "isAnswer": true
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+    ]
+}

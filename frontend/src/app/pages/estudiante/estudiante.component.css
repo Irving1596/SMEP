@@ -1,0 +1,84 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 18;
+    font-family: "lato", sans-serif;
+    font-weight: 800;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+    position: relative;
+    opacity: 0.90;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+
+    fixed = parallax
+    scroll = normal
+
+    */
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url('/assets/images/background/fondo3.4.png');
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-lingt {
+    background-color: #ff6f00;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 50px;
+    letter-spacing: 8px;
+}
+
+.ptext .border {
+    color: #ddd;
+    padding: 20px;
+}
+
+.ptext,
+.border,
+.trans {
+    background-color: transparent;
+}
+
+@media(max-width:568px) {
+    .pimg1,
+    .pimg2,
+    .pimg3 {
+        background-attachment: scroll;
+    }
+}
+
+.col-md-3 {
+    padding: 10px;
+    margin: 10px;
+    min-height: 300px;
+    position: relative;
+    display: inline-block;
+}

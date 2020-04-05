@@ -1,0 +1,80 @@
+<app-header2></app-header2>
+
+<body background="../assets/images/background/p6.jpg">
+    <br>
+    <!--Comienzo del Tema-->
+    <!-- Carta Principal Horizontal-->
+    <div class="row d-flex justify-content-center ">
+        <!-- News jumbotron -->
+        <div class="jumbotron text-center blue-grey lighten-5" style="max-width: 60rem;">
+
+            <!-- Subtitle -->
+            <h2 class="purple darken-4-text text-white font-weight-bold"><i class="fas fa-divide pr-1"></i>Tema 5</h2>
+
+            <!-- Title del tema-->
+            <h3 class="card-title h3">División de Polinomios</h3>
+
+            <!-- Grid row -->
+            <div class="row d-flex justify-content-center">
+
+                <!-- Grid column -->
+                <div class="col-xl-10 pb-2">
+                    <p class="card-text text-justify">Para explicar la división de polinomios nos valdremos de un ejemplo práctico con los polinomios:</p><br>
+                    <br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+                    <p class="card-text text-center">P(x) = x<sup>5</sup> + 2x³ − x − 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q(x) = x² − 2x + 1</p>
+                    <br>
+                    <p class="card-text text-center"><strong>P(x) ÷ &nbsp;Q(x)</strong></p>
+                    <br>
+                    <p class="card-text text-justify"><b>A la izquierda situamos el dividendo.</b> Si el polinomio <b>no es completo</b> dejamos <b>huecos</b> en los lugares que correspondan.</p>
+                    <br>
+                    <img src="https://www.superprof.es/apuntes/file/2019/05/4-15577538715583-2636.gif">
+                    <br>
+                    <br>
+                    <p class="card-text text-justify"><b>A la derecha situamos el divisor dentro de una caja.</b></p>
+                    <br>
+                    <p class="card-text text-center">x<sup>5</sup> ÷ x² = x³</p>
+                    <br>
+                    <p class="card-text text-justify"><b>Multiplicamos cada término del polinomio divisor por el resultado anterior y lo restamos del polinomio dividendo:</b></p>
+                    <br>
+                    <img src="https://www.superprof.es/apuntes/file/2019/05/5-15577538717579-5601.gif">
+                    <br>
+                    <br>
+                    <p class="card-text text-justify">Volvemos a <b>dividir</b> el primer monomio del dividendo entre el primer monomio del divisor. Y el resultado lo multiplicamos por el divisor y lo restamos al dividendo.</p>
+                    <p class="card-text text-justify">2x<sup>4</sup> ÷ x² = 2 x²</p>
+                    <br>
+                    <img src="https://www.superprof.es/apuntes/file/2019/05/6-15577538720779-3506.gif">
+                    <br>
+                    <br>
+                    <p class="card-text text-justify">Procedemos igual que antes.</p>
+                    <p class="card-text text-justify">5x³ ÷ x² = 5 x</p>
+                    <br>
+                    <p class="b"><img src="https://www.superprof.es/apuntes/file/2019/05/7-15577538723649-3072.gif"></p>
+                    <br>
+                    <p class="card-text text-justify">Volvemos a hacer las mismas operaciones.</p>
+                    <p class="card-text text-justify">8x² ÷ x² = 8</p>
+                    <br>
+                    <p class="b"><img src="https://www.superprof.es/apuntes/file/2019/05/3-15577538726504-8698.gif"></p>
+                    <br>
+                    <p class="card-text text-justify"><span class="sol">10x − 16 </span> es el <strong>resto</strong>, porque su <strong>grado es menor que el del divisor</strong> y por tanto no se puede continuar dividiendo.</p>
+                    <br>
+                    <p class="card-text text-justify"><span class="sol">x³ + 2x² + 5x + 8</span> es el <strong>cociente</strong>.</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+
+            <!--Botones-->
+            <div class="pagination pg-blue justify-content-center">
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3']">Regresar</a></button>
+
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3tem5eje1']">Realizar Ejercicio</a></button>
+            </div>
+
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- News jumbotron -->
+
+    <!--Final del Tema-->
+</body>

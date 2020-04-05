@@ -1,0 +1,95 @@
+<app-header2></app-header2>
+
+<body background="../assets/images/background/p6.jpg">
+    <br>
+    <!--Comienzo del Tema-->
+    <!-- Carta Principal Horizontal-->
+    <div class="row d-flex justify-content-center ">
+        <!-- News jumbotron -->
+        <div class="jumbotron text-center blue-grey lighten-5" style="max-width: 60rem;">
+
+            <!-- Subtitle -->
+            <h2 class="green-text my-4 font-weight-bold"><i class="fas fa-broom pr-1"></i>Tema 4</h2>
+
+            <!-- Title del tema-->
+            <h3 class="card-title h3">División de números reales</h3>
+
+
+            <!-- Grid row -->
+            <div class="row d-flex justify-content-center">
+
+                <!-- Grid column -->
+                <div class="col-xl-10 pb-2">
+                    <p class="card-text text-justify">Las divisiones de números reales se pueden transformar en multiplicaciones; para hacerlo, se multiplica el dividendo por el inverso multiplicativo del divisor.</p>
+                    <br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+
+                    <!--Ejemplos 1-->
+                    <img src="../assets/images/background/División1.PNG" alt="potenciacion1"><br><br>
+                    <!--Fin de Ejemplos 1-->
+
+                    <br>
+                    <p class="card-text text-justify">La división es la operación inversa de la multiplicación. No cumple las propiedades conmutativa ni asociativa en R, pero si las siguiente:</p>
+                    <br>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">Propiedades de la División</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog Modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Propiedades de la división de números reales ∀ a,b,c ϵ R</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Inicio Tabla de Propiedades-->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Clausura</td>
+                                    <td>a ÷ b ϵ R , ( b ≠ 0)</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Elemento neutro</td>
+                                    <td>a ÷ 1 = a</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Distributiva</td>
+                                    <td>( a ± b) ÷ c = ( a ÷ c) ± ( b ÷ c)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--Fin de Tabla de Propiedades-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <!--Botones-->
+            <div class="pagination pg-blue justify-content-center">
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u1']">Regresar</a></button>
+
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a
+                        [routerLink]="['/u1tem4eje1']">Realizar Ejercicio</a></button>
+            </div>
+
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- News jumbotron -->
+</body>
+<!--Final del Tema-->

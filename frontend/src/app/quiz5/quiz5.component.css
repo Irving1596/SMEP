@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div#result {
+    margin: auto;
+    margin-top: 60px;
+    width: 850px;
+    height: 100px;
+    background-color: blanchedalmond
+}
+
+div#izqui {
+    padding: 10px;
+    width: 280px;
+    height: 50px;
+    /* background-color: red; */
+    float: left;
+}
+
+div#center {
+    padding: 10px;
+    width: 266px;
+    height: 50px;
+    /* background-color: blue; */
+    float: left;
+}
+
+div#derecha {
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    /* background-color: maroon; */
+    float: left;
+}
+
+.card-img-top {
+    width: 35px;
+}
+
+.card-img-top1 {
+    width: 35px;
+    align-self: auto;
+}
+
+.card-img-top2 {
+    width: 35px;
+}
+
+body{
+    background:blanchedalmond; 
+font-family: 'Raleway', sans-serif;
+}
+.main-section{
+width:80%;
+margin:0 auto;
+text-align: center;
+padding: 0px 5px;
+}
+.dashbord{
+width:32%;
+display: inline-block;
+background-color:#34495E;
+color:#fff;
+margin-top: 50px; 
+}
+.icon-section i{
+font-size: 30px;
+padding:10px;
+border:1px solid #fff;
+border-radius:50%;
+margin-top:-25px;
+margin-bottom: 10px;
+background-color:#34495E;
+}
+.icon-section p{
+margin:0px;
+font-size: 20px;
+padding-bottom: 10px;
+}
+.detail-section{
+background-color: #2F4254;
+padding: 5px 0px;
+}
+.dashbord .detail-section:hover{
+background-color: #5a5a5a;
+cursor: pointer;
+}
+.detail-section a{
+color:#fff;
+text-decoration: none;
+}
+.dashbord-green .icon-section,.dashbord-green .icon-section i{
+background-color: #16A085;
+}
+.dashbord-green .detail-section{
+background-color: #149077;
+}
+.dashbord-orange .icon-section,.dashbord-orange .icon-section i{
+background-color: #F39C12;
+}
+.dashbord-orange .detail-section{
+background-color: #DA8C10;
+}
+.dashbord-blue .icon-section,.dashbord-blue .icon-section i{
+background-color: #2980B9;
+}
+.dashbord-blue .detail-section{
+background-color:#2573A6;
+}
+.dashbord-red .icon-section,.dashbord-red .icon-section i{
+background-color:#E74C3C;
+}
+.dashbord-red .detail-section{
+background-color:#CF4436;
+}
+.dashbord-skyblue .icon-section,.dashbord-skyblue .icon-section i{
+background-color:#8E44AD;
+}
+.dashbord-skyblue .detail-section{
+background-color:#803D9B;
+}

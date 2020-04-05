@@ -1,0 +1,136 @@
+<br>
+
+
+
+
+
+
+<div class="text-left container mt-2">
+
+
+    <!-- Parte del listado de Catedra -->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h2 class="card-title">Listado de Nuevas Clases</h2>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm">
+              <div class="shadow-lg p-3 mb-5 bg-white rounded nav justify-content-left">
+            <div class="btn-group btn-group-lg">
+                          <button mdbBtn type="button" color="primary" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>Nueva Clase</button>
+                          <button  mdbBtn type="button" color="secondary" class="relative waves-light"  style="margin-left: 40px"  mdbWavesEffect>Clases registradas </button>
+                        </div>
+                            </div>
+                <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                                    <span aria-hidden="true">×</span>
+                                    </button>
+                                <h4 class="modal-title w-100" id="myModalLabel">Crear Clase</h4>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-12">
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <input type="search" class="form-control" placeholder="ID:" [(ngModel)]="id_clase">
+                                        </div>
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <input type="search" class="form-control" placeholder="Nombre de Clase:" [(ngModel)]="nombre">
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="md-form input-group">
+                                            <span class="input-group-btn"></span>
+                                            <div class="md-form input-group">
+                                                <select class="browser-default custom-select" [(ngModel)]="ced_profesor" (change)="captura_prof()" >
+                                                                   <option [ngValue]="null" disabled selected>Profesor que dictara la clase:</option>
+                                                                    <option *ngFor="let profg of profesoresgrup" [value]="profg.ced_profesor">
+                                                                    {{profg.nombre}}  {{profg.apellido}}
+                                                                  </option>
+                                                                  </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Cancelar</button>
+                                            <button type="button" mdbBtn color="primary" class="relative waves-light" (click)="crear_clase();basicModal.hide()" mdbWavesEffect >Aceptar</button>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="http://localhost:4200/#/registroprof " class="btn btn-rounded btn-md ">Crear Profesor</a> -->
+
+            </div>
+            <div class="col-sm-8">
+
+            </div>
+        </div>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre de Clase</th>
+                    <th scope="col">Profesor</th>
+                    <th scope="col-sm"> Editar </th>
+                    <th scope="col-sm"> Borrar </th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let grup of grupos; let i = index" >
+        <th scope="row">{{i + 1}}</th>
+        <td>{{grup.id_grupo}}</td>
+        <td>{{grup.nombre}}</td>
+        <td>{{grup.ced_profesor}}</td>
+        <td>
+          <button type="button" name="button" class="btn btn-warning bbtn" (click)="basicModal.show();editar_clase(grup)" >
+            <img src="./assets/img/png/edit-icon.png" alt="Editar" width="14px" height="14px">
+          </button>
+        </td>
+        <td>
+          <button type="button" name="button" class="btn btn-outline-danger bbtn"  (click)="borrar_clase(i)" >
+            <img src="./assets/img/png/delete-icon.png" alt="Editar" width="14px" height="14px">
+          </button>
+        </td>
+      </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Boton Inserta datos -->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded nav justify-content-center">
+      <button type="button"  class="btn btn-success bbtn btn-lg" [routerLink]="['/admin']" >Regresar</button>
+        <button  type="button"  class="btn btn-success bbtn btn-lg" (click)="registra_clase()"  >Enviar</button>
+    </div>
+
+</div>
+
+
+
+<br>

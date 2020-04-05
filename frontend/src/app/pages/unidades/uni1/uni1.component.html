@@ -1,0 +1,198 @@
+<app-header2></app-header2>
+<div id="mySidenav" class="sidenav">
+    <a [routerLink]="['/u1']" id="about">Modulo1</a>
+    <a [routerLink]="['/u2']" id="blog">Modulo2</a>
+    <a [routerLink]="['/u3']" id="projects">Modulo3</a>
+
+</div>
+
+<!-- Section heading -->
+<div class="text-center">
+
+
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border trans">
+                                Números Reales
+                </span>
+        </div>
+
+        <p class="ptext1">*******</p>
+
+    </div>
+
+    <!-- Section description
+        <p class="grey-text pb-5 text-center mx-xl-5 px-xl-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+    <br>
+
+    <!-- Carta Principal Horizontal-->
+    <div class="row d-flex justify-content-center ">
+        <!-- News jumbotron -->
+        <div  class="animated lightSpeedIn" >
+        <div class="jumbotron text-center hoverable p-4 primary-color-dark" style="max-width: 50rem;">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid Image-->
+                <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+                    <!-- Featured image -->
+                    <div class="view overlay">
+                        <img src="../assets/images/background/irracional.png" class="img-fluid" alt="Sample image for first version of blog listing">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Fin Grid Image-->
+
+                <!-- Inicio Contenido -->
+                <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                    <!-- Excerpt -->
+                    <a href="#!" class="white-text">
+                        <h6 class="h6 pb-1 white-text"><i class="fas fa-book-open pr-1"></i> (Unidad 1 Tema 1) </h6>
+                    </a>
+
+                    <h4 class="h4 mb-4 white-text">Conjunto de los números irracionales</h4>
+
+                    <p class="font-weight-normal white-text text-justify">Son los elementos de la recta real que no pueden expresarse mediante el cociente de dos enteros y se caracterizan por poseer infinitas cifras decimales no periódicas.</p>
+                    <!--Buttons-->
+                    <a href="#" class="btn btn-outline-white btn-md" [routerLink]="['/u1tema1']">Ver Tema</a>
+                </div>
+                <!-- Fin Contenido-->
+            </div>
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- News jumbotron -->
+    </div>
+
+    <!-- Linea que divide las cartas-->
+    <hr class="text-center hoverable p-0 transparent" style="max-width: 67rem;">
+
+    <!-- Linea que divide las cartas-->
+    <hr class="text-center hoverable p-0 primary-color-dark" style="max-width: 67rem;">
+
+    <!---Titulo-->
+    <h7 class="h4 mb-5 black-text">Operaciones con números reales</h7>
+
+    <!-- Linea que divide las cartas-->
+    <hr class="text-center hoverable p-0 primary-color-dark" style="max-width: 67rem;">
+
+    <!-- Grid row -->
+    <div class="row d-flex justify-content-center">
+        <div class="feature-wrapper pt-5 pb-5 mt-5 mt-lg-0 ">
+            <div class="container ">
+                <div class="row ">
+
+
+                    <!--  Comienzo de Primera Carta -->
+
+                    <div class="col-md-4 ">
+                        <!--Satr Card-->
+                        <div  class="animated zoomInLeft" >
+                        <div class="card default-color-dark">
+
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="../assets/images/background/Adición y sustracción.png" class="card-img-top" alt="photo">
+                                <a href="#">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Unidad 1-->
+                                <a href="#!" class="white-text">
+                                    <h6 class="h6 pb-1 white-text"><i class="fas fa-book-open pr-1"></i> (Unidad 1 Tema 2)</h6>
+                                </a>
+                                <!--Title-->
+                                <h4 class="card-title white-text">Adición & Sustracción</h4>
+                                <!--Text-->
+                                <p class="card-text white-text">Se pueden sumar o restar los números reales, escritos como radicales cuando tienen el mismo índice.</p>
+                                <a [routerLink]="['/u1tema2']" class="btn btn-outline-white btn-md">Ver Tema</a>
+                            </div>
+                        </div>
+                        <!--End Card-->
+                          </div>
+                    </div>
+
+                    <!--  Final de Primera Carta -->
+
+
+                    <!--  Comienzo de Segunda Carta -->
+
+                    <div class="col-md-4 ">
+                        <!--Satr Card-->
+                        <div  class="animated fadeInDownBig" >
+                        <div class="card secondary-color-dark">
+
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="../assets/images/background/multiplicacion.png" class="card-img-top" alt="photo">
+                                <a href="#">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Unidad 1-->
+                                <a href="#!" class="white-text">
+                                    <h6 class="h6 pb-1 white-text"><i class="fas fa-book-open pr-1"></i> (Unidad 1 Tema 3)</h6>
+                                </a>
+                                <!--Title-->
+                                <h4 class="card-title white-text">Multiplicación</h4>
+                                <!--Text-->
+                                <p class="card-text white-text">Los números que se multiplican se llaman factores y el resultado se llama el producto o multiplicación.</p>
+                                <a [routerLink]="['/u1tema3']" class="btn btn-outline-white btn-md">Ver Tema</a>
+                            </div>
+                        </div>
+                        <!--End Card-->
+                    </div>
+                  </div>
+                    <!--  Final de Segunda Carta -->
+
+
+
+                    <!--  Comienzo de Tercera Carta -->
+                    <div class="col-md-4 ">
+                        <!--Satr Card-->
+                        <div  class="animated zoomInRight" >
+                        <div class="card  cyan darken-3">
+
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="../assets/images/background/División.png" class="card-img-top" alt="photo">
+                                <a href="#">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Unidad 1-->
+                                <a href="#!" class="white-text">
+                                    <h6 class="h6 pb-1 white-text"><i class="fas fa-book-open pr-1"></i> (Unidad 1 Tema 4)</h6>
+                                </a>
+                                <!--Title-->
+                                <h4 class="card-title white-text">División</h4>
+                                <!--Text-->
+                                <p class="card-text white-text">De la misma manera que para definir la resta recurrimos a algo que ya sabiamos, como era la suma de los numeros reales.</p>
+                                <a [routerLink]="['/u1tema4']" class="btn btn-outline-white btn-md">Ver Tema</a>
+                            </div>
+                        </div>
+                        <!--End Card-->
+                    </div>
+                    </div>
+                    <!--  Final de Tercera Carta -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

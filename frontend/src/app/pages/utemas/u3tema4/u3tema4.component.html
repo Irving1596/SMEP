@@ -1,0 +1,64 @@
+<app-header2></app-header2>
+
+<body background="../assets/images/background/p6.jpg">
+    <br>
+    <!--Comienzo del Tema-->
+    <!-- Carta Principal Horizontal-->
+    <div class="row d-flex justify-content-center ">
+        <!-- News jumbotron -->
+        <div class="jumbotron text-center blue-grey lighten-5" style="max-width: 60rem;">
+
+            <!-- Subtitle -->
+            <h2 class="bg-success text-white font-weight-bold"><i class="fas fa-times-circle pr-1"></i>Tema 4</h2>
+
+            <!-- Title del tema-->
+            <h3 class="card-title h3">Multiplicación de Polinomios</h3>
+
+            <!-- Grid row -->
+            <div class="row d-flex justify-content-center">
+
+                <!-- Grid column -->
+                <div class="col-xl-10 pb-2">
+                    <p class="card-text text-justify">Multiplicar polinomios implica aplicar las reglas de los exponentes y la Propiedad Distributiva para simplificar el producto.</p><br>
+                    <p class="card-text text-justify">Este tipo de operaciones se puede llevar a cabo de dos formas distitnas.</p>
+                    <br>
+                    <p class="card-text text-justify"><b>Ejemplo:</b></p>
+                    <p class="guion-v" class="card-text text-center"><b>P(x)</b> = 2x² − 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Q(x)</b> = 2x³ − 3x² + 4x</p>
+                    <br>
+                    <p class="card-text text-justify"><b><u>Método 1</u></b></p><br>
+                    <p class="card-text text-justify">1) Se multiplica cada monomio del primer polinomio por todos los elementos del segundo polinomio.</p>
+                    <br>
+                    <p class="guion-r" class="card-text text-center"><b>P(x)</b> · <b>Q(x)</b> = (2x² − 3) · (2x³ − 3x² + 4x) = 4x<sup>5 </sup>− 6x<sup>4</sup> + 8x³ − 6x³ + 9x² − 12x =</p>
+                    <br>
+                    <p class="card-text text-justify"> 2) Se suman los monomios del mismo grado.</p>
+                    <br>
+                    <p class="guion-r" class="card-text text-center"><span class="sol">= 4x<sup>5</sup> − 6x<sup>4</sup> + 2x³ + 9x² − 12x</span></p>
+                    <br>
+                    <p class="card-text text-justify"> 3) Se obtiene otro polinomio cuyo grado es la suma de los grados de los polinomios que se multiplican.</p>
+                    <br>
+                    <p class="guion-r" class="card-text text-justify">Grado del polinomio = Grado de P(x) + Grado de Q(x) = 2 + 3 = <span class="sol">5</span></p>
+                    <br>
+                    <p class="card-text text-justify"><b><u>Método 2</u></b></p><br>
+                    <p class="card-text text-justify">También podemos sumar polinomios escribiendo un polinomio debajo del otro. En cada fila se multiplica cada uno de los monomios del segundo polinomio por todos los monomios del primer polinomio. Se colocan los monomios semejantes en
+                        la misma columna y posteriormente se suman los monomios semejantes. Como la multiplicación de polinomios cumple la propiedad conmutativa, hemos tomado como polinomio multiplicador el polinomio más sencillo.</p>
+                    <br>
+                    <p class="card-text text-center"><img src="https://www.superprof.es/apuntes/file/2019/05/0_1-15577547241299-1040.gif"></p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+
+            <!--Botones-->
+            <div class="pagination pg-blue justify-content-center">
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3']">Regresar</a></button>
+
+                <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/u3tem4eje1']">Realizar Ejercicio</a></button>
+            </div>
+
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- News jumbotron -->
+
+    <!--Final del Tema-->
+</body>

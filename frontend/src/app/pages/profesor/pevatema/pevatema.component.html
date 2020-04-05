@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Favicon -->
+    <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+
+    <link href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- Argon CSS -->
+    <link type="text/css" href="./assets/css/argon.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Sidenav -->
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+        <div class="container-fluid">
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+            <!--  Logo -->
+            <a class="navbar-brand pt-4">
+                <img src="../assets/img/brand/admin.png" width="80" height="400" class="navbar-brand-img" alt="...">
+            </a>
+
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Collapse header -->
+                <div class="navbar-collapse-header d-md-none">
+                    <div class="row">
+
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/profesor']">
+                            <i class="ni ni-tv-2 text-primary"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/profesor']">
+                            <i class="ni ni-single-02 text-yellow"></i> Evaluaciones
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/login']">
+                            <i class="ni ni-key-25 text-info"></i> Cerrar Sesion
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Divider -->
+                <hr class="my-3">
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+            <!-- Brand -->
+
+
+
+            <div class="dropdown ">
+                <button class="dropbtn btn btn-primary dropdown-toggle" data-toggle="dropdown">Grupos</button>
+                <div class="dropdown-content" [(ngModel)]="id_grupo"  >
+                    <a *ngFor="let profesorgrupo of profesorgrupos" [value]="profesorgrupo.id_grupo" [routerLink]="['/profesor2']">
+                      {{profesorgrupo.id_grupo}} </a>
+                </div>
+            </div>
+
+
+
+
+            <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                <div class="form-group mb-0">
+                    <div class="input-group input-group-alternative">
+
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+
+                        <input class="form-control" placeholder="Search" type="text">
+                    </div>
+                </div>
+            </form>
+
+
+        </nav>
+        <!-- Header -->
+        <div class="pimg1">
+            <div class="ptext">
+                <span class="border trans">
+                            Evaluaciónes por Temas
+                        </span>
+            </div>
+        </div>
+
+        <!-- Formulario  -->
+
+
+
+        <!--  Segundo formulario   -->
+
+
+        <!-- Dark table -->
+        <div class="row mt-4">
+            <div class="col">
+                <div class="card bg-default shadow">
+                    <div class="card-header bg-transparent border-0">
+                        <h3 class="text-white mb-0">Evaluación por temas</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-dark table-flush">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Nº</th>
+                                    <th scope="col">Tema</th>
+                                    <th scope="col">Aprobado</th>
+                                    <th scope="col">Reprobado</th>
+                                    <th scope="col">Estudiantes</th>
+                                    <th scope="col">Rendimiento</th>
+                                    <!-- <th scope="col">Completion</th> -->
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr *ngFor="let pcaltem of pcaltems | paginate : {itemsPerPage: 7, currentPage: pageActual}; let i = index">
+
+                                    <th scope="row">{{i + 1}}</th>
+                                    <td>{{pcaltem.nombre_tema}}</td>
+                                    <td>{{pcaltem.aprobados}}</td>
+                                    <td>{{pcaltem.reprobados}}</td>
+                                    <td>{{pcaltem.total}}</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-2">{{pcaltem.rendimiento}}%</span>
+
+                                            <div class="progress">
+                                                <div class="progress-bar" [style.width.%]="pcaltem.rendimiento" class=" {{ pcaltem.rendimiento >=50 ? 'bg-success': 'bg-warning'}}"></div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <pagination-controls autoHide="true" previousLabel="Anterior" nextLabel="Siquiente" (pageChange)="pageActual = $event"></pagination-controls>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <br>
+        <br>
+
+
+
+
+
+          <!--  <app-grafica2></app-grafica2> -->
+        <br>
+        <br>
+
+        <!-- Fin Tarjetas del profesor   -->
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination pg-blue justify-content-center ">
+                <li class="page-item ">
+                    <button type="button" class="btn sunny-morning-gradient bbtn btn-lg"><a [routerLink]="['/profesor']">Regresar</a></button>
+
+                </li>
+            </ul>
+        </nav>
+
+
+        <br>
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <div class="footer-copyright text-center py-3">© 2019 Copyright
+
+            </div>
+        </footer>
+    </div>
+
+    <!-- Argon Scripts -->
+    <!-- Core -->
+    <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Optional JS -->
+    <script src="./assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="./assets/vendor/chart.js/dist/Chart.extension.js"></script>
+    <!-- Argon JS -->
+    <script src="./assets/js/argon.js?v=1.0.0"></script>
+</body>
+
+</html>

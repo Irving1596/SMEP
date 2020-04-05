@@ -1,0 +1,119 @@
+{
+    "id": 3105,
+    "name": "Tema 6: Polinomios Completo",
+    "description": "¿Cuál de las siguientes opciones es un polinomio completo?",
+    "cant": 3,
+    "questions": [{
+            "id": 1010,
+            "name": "¿Cuál de las siguientes opciones es un polinomio completo?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "P (x) = x^3 + x^2 + 7",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "F (x) = x^4 + 5x^2 +10x + 9",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Q (x) = x^4 + 3x^3 + 2x^2 -4x + 6",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "M (x) = x^2 + 5",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1011,
+            "name": "¿Cuál de las siguientes opciones es un polinomio incompleto?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "B (x, y) = x^3 + x^2 y + 10xy +5",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "S (x, y) = 45x^3 + 7x^2 y + 9xy +2",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "N (x, y) = 225x^3 + 25xy +1025",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Z (x, y) = 15x^3 + 30x^2 y + 5xy +1",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 1012,
+            "name": "¿Cuál de las siguientes opciones es un polinomio completo?",
+            "questionTypeId": 1,
+            "options": [{
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "R (y) = 12y^5 – 3y^4 + y^3 -y^2 +2y +23",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "T (y) = y^7 –56y^4 - 40y^2 +2y +23",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "U (y) = 14y^6 +2y^4 + 90y^3 -5y^2 +7y",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "O (y) = 12y^9 + 24y^3 -6y^2 +20y +25",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+
+
+
+
+
+
+
+    ]
+}

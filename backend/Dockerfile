@@ -5,7 +5,7 @@ RUN mkdir -p /usr/back
 # Nos cambiamos a ese directoria
 WORKDIR /usr/back
 # Copiamos el paquete json para gestionar las dependencias 
-COPY package.json /usr/back
+COPY backend/package.json /usr/back
 # Instalamos esas depndencias
 RUN npm install
 # Copiamos el código que hemos generado en el punto anterior,

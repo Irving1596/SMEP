@@ -13,6 +13,8 @@ RUN npm install
 RUN npm i -g @angular/cli
 # Copiamos el código que hemos generado en el punto anterior, al crear la aplicación angular-cli
 COPY frontend/. /usr/front
+# IMPORTANTE Copiamos el directorio angular-bootstrap-md para que levante sin errores nuestra aplicacion
+COPY frontend/angular-bootstrap-md /usr/front/node_modules
 # Exponemos el Puerto
 EXPOSE 4200
 # Arrancamos

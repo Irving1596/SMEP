@@ -12,7 +12,7 @@ RUN npm install
 #instalamos angular
 RUN npm i -g @angular/cli
 # Copiamos el código que hemos generado en el punto anterior, al crear la aplicación angular-cli
-COPY . /usr/front
+COPY frontend/. /usr/front
 # Exponemos el Puerto
 EXPOSE 4200
 # Arrancamos

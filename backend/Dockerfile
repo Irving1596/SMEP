@@ -10,7 +10,7 @@ COPY backend/package.json /usr/back
 RUN npm install
 # Copiamos el código que hemos generado en el punto anterior,
 #al crear la aplicación express
-COPY . /usr/back
+COPY backend/. /usr/back
 # Exponemos el Puerto
 EXPOSE 3200
 # Arrancamos

@@ -7,11 +7,10 @@ async function insert_calif(emp) {
  const binds = {};
 const jsondata = emp;
 const values = [];
-for(var i=0; i< jsondata.length; i++)
-  values.push([jsondata[i].cod_tema,jsondata[i].puntos_max,jsondata[i].puntos_obt,jsondata[i].calificacion]);
+//for(var i=0; i< jsondata.length; i++)
+  values.push([jsondata.cod_tema,jsondata.puntos_max,jsondata.puntos_obt,jsondata.calificacion]);
 
-console.log("values",values);
-console.log("jsondata",jsondata[0].cod_tema);
+
  //const create_prof_Sql =
 //  `INSERT INTO Profesor (CED_PROFESOR,PASSWORD,NOMBRE,APELLIDO,SEXO,DIRECCION,CORREO,CELULAR) VALUES (`+"'"+profesor.ced_prof+"','"+profesor.password+"','"+profesor.nombre+"','"+profesor.apellido+"','"+profesor.sexo+"','"+profesor.direccion+"','"+profesor.correo+"',"+profesor.celular+")";
 
@@ -19,7 +18,7 @@ console.log("jsondata",jsondata[0].cod_tema);
    `INSERT INTO Calificacion_Tema (COD_TEMA,PUNTOS_MAX,PUNTOS_OBT,CALIFICACION) VALUES ?`;
 
  const result = await pool.simpleExecute(create_cal_Sql,values);
-console.log("result",result);
+
  return result;
 }
 
@@ -28,11 +27,10 @@ async function insert_calif_estud(emp) {
  const binds = {};
 const jsondata = emp;
 const values = [];
-for(var i=0; i< jsondata.length; i++)
-  values.push([jsondata[i].id_calftema,jsondata[i].id_estudiante,jsondata[i].fecha]);
+//for(var i=0; i< jsondata.length; i++)
+  values.push([jsondata.id_calftema,jsondata.id_estudiante,jsondata.fecha]);
 
-console.log("values",values);
-console.log("jsondata id",jsondata[0].id_calftema);
+
  //const create_prof_Sql =
 //  `INSERT INTO Profesor (CED_PROFESOR,PASSWORD,NOMBRE,APELLIDO,SEXO,DIRECCION,CORREO,CELULAR) VALUES (`+"'"+profesor.ced_prof+"','"+profesor.password+"','"+profesor.nombre+"','"+profesor.apellido+"','"+profesor.sexo+"','"+profesor.direccion+"','"+profesor.correo+"',"+profesor.celular+")";
 
@@ -40,7 +38,7 @@ console.log("jsondata id",jsondata[0].id_calftema);
    `INSERT INTO Estudiante_Calif (ID_CALFTEMA,ID_ESTUDIANTE,FECHA) VALUES ?`;
 
  const result = await pool.simpleExecute(create_cal_est_Sql,values);
-console.log("result",result);
+
  return result;
 }
 

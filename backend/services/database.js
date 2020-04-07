@@ -44,7 +44,7 @@ function simpleExecute(statement, binds=[]) {
 
 
     const  result=connection.query(statement,[binds], function (error, results, fields) {
-      console.log("result",error);
+     
               resolve(results);
         });
       });
@@ -68,7 +68,6 @@ function simpleExecuteupdate(statement, binds,binds2) {
 
 
     const  result=connection.query(statement,[binds,binds2], function (error, results, fields) {
-      console.log("result",error);
               resolve(results);
         });
       });

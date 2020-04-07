@@ -34,7 +34,7 @@ export class Profesor {
 }
 
 export class ProfesorUpdate {
-	public id: number;
+	public ID: number;
 	public ced_profesor: string;
 	public password: string;
 	public nombre: string;
@@ -46,7 +46,7 @@ export class ProfesorUpdate {
 
 
 	constructor(
-		id: number,
+		ID: number,
 		ced_profesor: string,
 		password: string,
 		nombre: string,
@@ -56,7 +56,7 @@ export class ProfesorUpdate {
   	correo: string,
   	celular: number){
 
-			this.id=id;
+			this.ID=ID;
       this.ced_profesor = ced_profesor;
       this.password = password;
 	    this.nombre = nombre;

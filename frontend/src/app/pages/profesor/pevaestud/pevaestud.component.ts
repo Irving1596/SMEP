@@ -10,7 +10,7 @@ import { Grupo} from 'src/app/class/grupo.class';
 })
 export class PevaestudComponent implements OnInit {
   pcalestuds: Pcalestud[] = [];
-    usuarios: Usuario[] = [];
+    usuarios: Usuario;
 profesorgrupos: Grupo[] = [];
  id_grupo : string;
 

@@ -11,7 +11,7 @@ declare function init_plugins();
 })
 export class LoginComponent implements OnInit {
   public concursantes: any = [];
-  public usuarios: Usuario[] = [];
+  public usuarios: Usuario;
   rol: string;
   constructor( private logprof: ApiService , private router: Router) {
 
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
   valida_user(): void {
     const est = this.logprof.getLoginUser(this.username,this.password).subscribe(
-      (data: Usuario[]) => {
+      (data: Usuario) => {
           this.usuarios = data;
           this.guardarStorage('usuarios');     
          if(data.rol=='estudiante'){

@@ -1,11 +1,11 @@
 export class Estudcalif {
 	public id_calftema: number;
-	public id_estudiante: number;
+	public id_estudiante: String;
 	public fecha: Date;
 
 	constructor(
 		id_calftema: number,
-		id_estudiante: number,
+		id_estudiante: String,
 		fecha: Date){
 
       this.id_calftema = id_calftema;

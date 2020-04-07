@@ -27,12 +27,11 @@ async function crear_clase(emp) {
 const jsondata = emp;
 const values = [];
 
-console.log("dentro de crear clase",jsondata);
-  console.log("grupo",jsondata.length);
+
 for(var i=0; i< jsondata.length; i++)
   values.push([jsondata[i].id_grupo,jsondata[i].ced_profesor,jsondata[i].nombre]);
 
-console.log("values",values);
+
  //const create_prof_Sql =
 //  `INSERT INTO Profesor (CED_PROFESOR,PASSWORD,NOMBRE,APELLIDO,SEXO,DIRECCION,CORREO,CELULAR) VALUES (`+"'"+profesor.ced_prof+"','"+profesor.password+"','"+profesor.nombre+"','"+profesor.apellido+"','"+profesor.sexo+"','"+profesor.direccion+"','"+profesor.correo+"',"+profesor.celular+")";
 

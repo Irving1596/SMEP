@@ -10,7 +10,7 @@ import { Grupo} from 'src/app/class/grupo.class';
 })
 export class PevatemaComponent implements OnInit {
   pcaltems: Pcaltem[] = [];
-    usuarios: Usuario[] = [];
+    usuarios: Usuario;
     profesorgrupos: Grupo[] = [];
      id_grupo : string;
   constructor(private profService: ProfesorService) {

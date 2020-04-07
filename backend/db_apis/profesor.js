@@ -99,31 +99,23 @@ const result = await pool.simpleExecute(query);
 
 //function that update a profesor
 async function editar_prof(emp) {
- const profesor = Object.assign({}, emp);
-const jsondata = emp;
-const values = [];
-console.log("jsondta",jsondata[0].ced_profesor);
-//for(var i=0; i< jsondata.length; i++)
-const binds2 = {
-  ced_profesor: jsondata[0].ced_profesor, //todo en minuscula sino agrega nada es porque debe estar en minuscula
-  password: jsondata[0].password,
-    nombre: jsondata[0].nombre,
-        apellido: jsondata[0].apellido,
-  sexo:jsondata[0].sexo,
-  direccion:jsondata[0].direccion,
-  correo: jsondata[0].correo,
-    celular: jsondata[0].celular,
-};
+ //const profesor = Object.assign({}, emp);
+
 const bindsid = {
-  ID: jsondata[0].id,
+  ID: emp.ID,
 };
 
 const update_prof_Sql =
    "UPDATE Profesor SET ? where ?";
- const result = await pool.simpleExecuteupdate(update_prof_Sql,binds2,bindsid);
+ const result = await pool.simpleExecuteupdate(update_prof_Sql,emp,bindsid);
 
+console.log("resir",result);
+if (result.affectedRows && result.affectedRows === 1) {
+  return emp;
+} else {
+  return null;
+}
 
- return result;
 }
 
 //function that delete a profesor

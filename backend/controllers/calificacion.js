@@ -9,7 +9,6 @@ controller.post_calif = async function post(req, res, next) {
     let cal = getCalFromRec(req);
     cal = await calificacion.insert_calif(cal);
 
-      console.log("respuesta del post en est, id",cal.insertId);
     res.status(201).json(cal);
 
   } catch (err) {
@@ -24,8 +23,6 @@ controller.post_calif_est = async function post(req, res, next) {
     let califest = getCalEstFromRec(req);
 
     califest = await calificacion.insert_calif_estud(califest);
-
-        console.log("respuesta del post en class",califest);
     res.status(201).json(califest);
 
   } catch (err) {
@@ -51,6 +48,7 @@ controller.list_calif_estudgraf=async function get(req, res, next) {
     try {
       const context = {};
       context.id = req.params.id;
+      console.log("contetx",context)
       const rows = await calificacion.find_calif_estudsgraf(context);
 
         res.status(200).json(rows);

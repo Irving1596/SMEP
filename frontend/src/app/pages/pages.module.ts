@@ -47,7 +47,7 @@ import { Grafica2Component } from './graficas/grafica2/grafica2.component';
 // Paginacion
 
 import {NgxPaginationModule} from 'ngx-pagination';
-import { Bdprof1Component } from './admin/bdprof1/bdprof1/bdprof1.component';
+//import { Bdprof1Component } from './admin/bdprof1/bdprof1/bdprof1.component';
 
 
 

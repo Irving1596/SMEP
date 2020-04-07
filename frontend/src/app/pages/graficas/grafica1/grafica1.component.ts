@@ -12,7 +12,7 @@ export class Grafica1Component implements OnInit {
     usuarios: Usuario[] = [];
     graf=[];
   public chartType: string = 'line';
-  public chartDatasets: Array= [
+  public chartDatasets = [
       { data: [1,33,44,55,22], label: 'Estudiante'},
       { data: [22,33,44,22,11], label: 'Tema' }
     ];

@@ -11,8 +11,8 @@ import { ApiService } from  'src/app/services/api.service';
   styleUrls: ['./bdprof1.component.scss']
 })
 export class Bdprof1Component implements OnInit {
-profesores: Profesor[]=[];
-profs: ProfesorUpdate[]=[];
+profesores: Profesor[];
+profs: ProfesorUpdate;
 sexo: string;
 M = 'M';
 F = 'F';
@@ -45,10 +45,10 @@ console.log("dataaaa",this.profesores);
 
 updateprofesores(profesor){
 
-  const prof = this.list_prof.putAct_Prof(this.profs).subscribe((data:ProfesorUpdate[])=>{
+  const prof = this.list_prof.putAct_Prof(this.profs).subscribe((data:ProfesorUpdate)=>{
     console.log("data",data);
         this.getprofesores();
-        this.profs.pop();
+        //this.profs.pop();
   });
 }
   f_editar_profesor(profesor:ProfesorUpdate){
@@ -65,18 +65,19 @@ updateprofesores(profesor){
 }
 f_update_profesor(){
     if(!this.cedula || !this.password || !this.nombre ||!this.apellido||!this.sexo ||!this.direccion ||!this.correo ||!this.celular ) return;
-    this.profs.id =this.id;
-    this.profs.ced_profesor =this.cedula;
+//    this.profs.id =this.id;
+ /*   this.profs.ced_profesor =this.cedula;
     this.profs.password = this.password;
     this.profs.nombre = this.nombre;
     this.profs.apellido = this.apellido;
   this.profs.sexo = this.sexo;
   this.profs.direccion = this.direccion;
   this.profs.correo = this.correo;
-  this.profs.celular = this.celular;
-    const updateProf = new ProfesorUpdate( this.id,this.cedula, this.password, this.nombre, this.apellido,this.sexo,this.direccion,this.correo,this.celular);
+  this.profs.celular = this.celular;*/
+    //const updateProf = new ProfesorUpdate( this.id,this.cedula, this.password, this.nombre, this.apellido,this.sexo,this.direccion,this.correo,this.celular);
+    this.profs = new ProfesorUpdate( this.id,this.cedula, this.password, this.nombre, this.apellido,this.sexo,this.direccion,this.correo,this.celular);
 
-        this.profs.push(updateProf);
+       // this.profs=updateProf;
         console.log("prof en update",this.profs);
 
     this.updateprofesores(this.profs);

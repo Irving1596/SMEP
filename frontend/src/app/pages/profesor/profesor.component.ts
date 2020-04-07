@@ -8,7 +8,7 @@ import { ProfesorService } from  'src/app/services/profesor.service';
   styleUrls: ['./profesor.component.css']
 })
 export class ProfesorComponent implements OnInit {
-usuarios: Usuario[] = [];
+usuarios: Usuario ;
 pcalestudgrafs: Pcalestudgraf[] = [];
   graf=[];
   constructor(private profService: ProfesorService) {
@@ -19,7 +19,7 @@ pcalestudgrafs: Pcalestudgraf[] = [];
 
   ngOnInit() {
   //  localStorage.removeItem('graf');
-
+console.log("useeeee",this.usuarios.id_profesor);
       this.profService.getPcalestudsgraf(this.usuarios.id_profesor).subscribe(
         (data: Pcalestudgraf[]) => {
           this.pcalestudgrafs = data;

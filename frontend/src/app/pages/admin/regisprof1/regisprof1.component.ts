@@ -46,7 +46,7 @@ export class Regisprof1Component implements OnInit {
 
         this.profesores.push(nuevoProf);
         this.guardarStorage('profesores');
-        if(!this.nuevoProf){
+        if(!nuevoProf){
         this.snackBar.open('', '¡Se a creado, correctamente!', {duration: 3000});
       }
   }

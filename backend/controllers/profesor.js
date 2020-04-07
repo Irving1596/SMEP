@@ -72,9 +72,11 @@ controller.list_profesores =async function get(req, res, next) {
       try {
         let prof= req.body;
         prof = await profesor.editar_prof(prof);
-
-          console.log(prof);
-        res.status(200).json(prof);
+        if (prof !== null) {
+          res.status(200).json(prof);
+        } else {
+          res.status(404).end();
+        }
 
       } catch (err) {
         next(err);
@@ -87,8 +89,6 @@ controller.list_profesores =async function get(req, res, next) {
     const context = {};
     context.id = req.params.id;
         prof = await profesor.borrar_prof(context);
-
-          console.log("controlador del",prof);
         res.status(204).end();
 
       } catch (err) {

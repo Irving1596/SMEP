@@ -92,7 +92,7 @@ registra_clase(){
   captura_prof() {
             console.log("valor de cedula",this.ced_profesor);
         // Pasamos el valor seleccionado a la variable verSeleccion
-        this.grupos.ced_profesor= this.ced_profesor;
+        //this.grupos.ced_profesor= this.ced_profesor;
     }
 
   guardarStorage(event){

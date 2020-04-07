@@ -1,0 +1,57 @@
+version: '3.7'
+services:
+  web: 
+   image: irving1596/smepfront
+   container_name: frontsmep
+   ports:
+      - "4200:4200"
+   volumes:
+    - type: bind
+      source: ./frontend
+      target: /usr/front
+
+   networks:
+       -  netsmep
+  app: 
+    image: irving1596/smepback
+    container_name: backsmep
+    ports:
+      - "3200:3200"
+    volumes:
+     - type: bind
+       source: ./backend
+       target: /usr/back
+    environment:
+      DB_HOST: dbsmep
+      DB_PORT: 3306
+    depends_on:
+      - dbserver
+    networks:
+      - netsmep
+  dbserver:
+    image: mysql:5.7
+    container_name: dbsmep
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: smep
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./BD:/docker-entrypoint-initdb.d
+    networks:
+      netsmep:
+            aliases:
+              - dbsmep
+            ipv4_address: 172.16.238.10
+            ipv6_address: 2001:3984:3989::10 
+
+networks:
+  netsmep:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: "172.16.238.0/24"
+      -
+        subnet: "2001:3984:3989::/64"

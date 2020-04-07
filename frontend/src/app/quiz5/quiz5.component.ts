@@ -15,9 +15,9 @@ import { Usuario} from 'src/app/class/user.class';
 })
 export class Quiz5Component implements OnInit {
   bloq :boolean =false; //variable que permite que pase una sola vez por el submit
-  usuarios: Usuario[] = [];
-  calftemas:Calftema[]=[];
-  estudcalifs:Estudcalif[]=[];
+  usuarios: Usuario;
+  calftemas:Calftema;
+  estudcalifs:Estudcalif;
   sum:number =0;
   calif:number;
   diffs='';
@@ -142,15 +142,15 @@ export class Quiz5Component implements OnInit {
     this.calif=1;
   }
   let now= new Date();
-  const nuevaCalif = new Calftema( this.quiz.id, max, this.sum,this.calif);
-    this.calftemas.push(nuevaCalif);
+  this.calftemas = new Calftema( this.quiz.id, max, this.sum,this.calif);
+    //this.calftemas.push(nuevaCalif);
     const cal = this.regcal.postCalif(this.calftemas).subscribe(
-      (data: Calftema[]) => {
+      (data: Calftema) => {
         console.log("data",data);
-        const nuevaCalifEst = new Estudcalif( data.insertId, this.usuarios.id_estudiante,now);
-          this.estudcalifs.push(nuevaCalifEst);
+        this.estudcalifs= new Estudcalif( data.insertId, this.usuarios.id_estudiante,now);
+          //this.estudcalifs.push(nuevaCalifEst);
         const calest = this.regcal.postCalifEst(this.estudcalifs).subscribe(
-          (data: Estudcalif[]) => {
+          (data: Estudcalif) => {
             console.log("data2",data);
       });
   });

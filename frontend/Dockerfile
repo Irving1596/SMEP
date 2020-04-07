@@ -18,4 +18,5 @@ COPY frontend/angular-bootstrap-md /usr/front/node_modules/angular-bootstrap-md
 # Exponemos el Puerto
 EXPOSE 4200
 # Arrancamos
-CMD ["ng", "serve"]
+#CMD ["ng", "serve"]
+CMD ng serve --host 0.0.0.0

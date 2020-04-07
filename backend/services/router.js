@@ -17,7 +17,7 @@ const calif = require('../controllers/calificacion.js');
 
      //SMEP
         //Sin Sequelize
-        router.get('/profesor_list/',profesor.list_profesores);
+      router.get('/profesor_list/',profesor.list_profesores);
         //Con Sequelize
      //router.get('/profesor_list/',profesor.list_profesores_seq);
      router.get('/estudiante_list/',estudiante.list_estudiantes);

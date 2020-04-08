@@ -3,6 +3,7 @@
 /frontend/node_modules/
 /backend/node_modules/
 /BD/
+*.gitignore
 #Logs
 logs
 *.log

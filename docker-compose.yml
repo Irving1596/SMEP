@@ -22,26 +22,27 @@ services:
        source: ./backend
        target: /usr/back
     environment:
-      DB_HOST: dbsmep
+      DB_HOST: bdsmep
       DB_PORT: 3306
     depends_on:
-      - dbserver
+      - bdserver
     networks:
       - netsmep
-  dbserver:
+  bdserver:
     image: mysql:5.7
-    container_name: dbsmep
+    container_name: bdsmep
     environment:
        MYSQL_ROOT_PASSWORD: root
        MYSQL_DATABASE: smep
-    ports:
-      - "3306:3306"
+    #ports:
+    #  - "3306:3306"
     volumes:
       - ./BD:/docker-entrypoint-initdb.d
+      - ./BD/mysql:/var/lib/mysql
     networks:
       netsmep:
             aliases:
-              - dbsmep
+              - bdsmep
             ipv4_address: 172.16.238.10
             ipv6_address: 2001:3984:3989::10 
 

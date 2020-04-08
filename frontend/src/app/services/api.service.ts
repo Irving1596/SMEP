@@ -21,8 +21,8 @@ export class ApiService {
 
 
 
-getLoginUser(user: string,password: string){
-return this.http.get('http://localhost:3200/user_list/?userId='+user+'&userPass='+password).pipe(
+getLoginUser(user: string,password: string){ 
+return this.http.get('http://192.168.1.127:3200/user_list/?userId='+user+'&userPass='+password).pipe(
 map(respuestaData => {
   console.log('respuestaDataaaa::', respuestaData);
   return respuestaData;
